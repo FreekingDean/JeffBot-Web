@@ -18,5 +18,5 @@ end
 # Simple API endpoint for getting response to query
 post '/api/v1/post' do
   ap params
-  MQWrapper.send(params['args'])
+  MQWrapper.send(params['arg'])
 end
