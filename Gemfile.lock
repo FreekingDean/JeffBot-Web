@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     amq-protocol (2.0.1)
+    awesome_print (1.6.1)
     bunny (2.3.1)
       amq-protocol (>= 2.0.1)
     rack (1.6.4)
@@ -21,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bunny
   sinatra
   slim

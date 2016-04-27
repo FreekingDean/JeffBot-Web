@@ -2,6 +2,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'slim'
+require 'awesome_print'
 require_relative 'lib/mqwrapper'
 
 set :port, ENV['PORT'] || 8080
@@ -16,5 +17,6 @@ end
 ##
 # Simple API endpoint for getting response to query
 post '/api/v1/post' do
+  ap params
   MQWrapper.send(params['args'])
 end
