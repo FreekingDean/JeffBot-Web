@@ -14,6 +14,15 @@ get '/' do
   slim :chathome
 end
 
+post '/api/actions/main' do
+  ap params
+  'okay!'
+end
+
+post '/api/actions/chat' do
+  ap params
+  'sup'
+end
 ##
 # Simple API endpoint for getting response to query
 post '/api/v1/post' do
