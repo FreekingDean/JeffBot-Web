@@ -22,13 +22,7 @@ post '/api/actions/main' do
   {
     conversation_token: 'test',
     expect_user_response: true,
-    expected_inputs: [{
-      possible_intents: [{intent: 'assistant.intent.action.TEXT'}],
-      input_prompt: {
-        inital_prompts: [{text_to_speech: "Hello, I'm jeffbot!"}],
-        no_input_prompts: []
-      }
-    }]
+    response: 'tester'
   }.to_json
 end
 
