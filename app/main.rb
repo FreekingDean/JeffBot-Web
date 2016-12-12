@@ -18,7 +18,7 @@ end
 
 post '/api/actions/main' do
   ap params
-  header['Content-Type'] = 'application/json'
+  headers['Content-Type'] = 'application/json'
   {
     conversation_token: 'test',
     expect_user_response: true,
