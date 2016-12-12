@@ -18,7 +18,16 @@ end
 
 post '/api/actions/main' do
   ap params
-  {final_response: {speech_response: {text_to_speech: "Hello, I'm jeffbot!"}}}.to_json
+  {
+    conversation_token: {jeffbotInstance: 'none'}.to_json,
+    expected_inputs: [{
+      possible_intents: [{intent: 'assistant.intent.action.TEXT'}],
+      input_prompt: {
+        inital_prompts: [{text_to_speech: "Hello, I'm jeffbot!"}],
+        no_input_prompts: []
+      }
+    }]
+  }.to_json
 end
 
 post '/api/actions/chat' do
