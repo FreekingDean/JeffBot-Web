@@ -4,6 +4,7 @@ require 'rubygems'
 require 'sinatra'
 require 'slim'
 require 'awesome_print'
+require 'json'
 require_relative 'lib/mqwrapper'
 
 set :port, ENV['PORT'] || 8080
@@ -17,7 +18,7 @@ end
 
 post '/api/actions/main' do
   ap params
-  'okay!'
+  {final_response: {speech_response: {text_to_speech: "Hello, I'm jeffbot!"}}}.to_json
 end
 
 post '/api/actions/chat' do
