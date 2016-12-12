@@ -19,7 +19,7 @@ end
 post '/api/actions/main' do
   ap params
   {
-    conversation_token: {jeffbotInstance: 'none'}.to_json,
+    conversation_token: 'test',
     expect_user_response: true,
     expected_inputs: [{
       possible_intents: [{intent: 'assistant.intent.action.TEXT'}],
